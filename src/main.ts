@@ -4,8 +4,8 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  
-  const host = process.env.HOST ?? '192.168.40.5';
+
+  const host = process.env.HOST ?? 'localhost';
   const port = Number(process.env.PORT ?? 3000);
 
   app.useGlobalPipes(new ValidationPipe());
